@@ -14,6 +14,10 @@ const routes: Routes = [
     {
         path: 'cabinet',
         loadChildren: () => import('../children/cabinet/cabinet.routing-module').then((m: any) => m.CabinetRoutingModule)
+    },
+    {
+        path: '**',
+        loadChildren: () => import('../children/not-found/not-found.routing-module').then((m: any) => m.NotFoundRoutingModule)
     }
 ]
 
