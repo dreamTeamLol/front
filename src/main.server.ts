@@ -6,7 +6,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 
 
-const appConfig: ApplicationConfig = {
+const appServerConfig: ApplicationConfig = {
     providers: [
         provideServerRendering(),
         provideClientHydration(),
@@ -14,6 +14,6 @@ const appConfig: ApplicationConfig = {
     ]
 }
 
-const bootstrap = () => bootstrapApplication(AppComponent, appConfig);
+const bootstrap = () => bootstrapApplication(AppComponent, appServerConfig);
 
 export default bootstrap;
