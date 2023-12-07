@@ -1,3 +1,28 @@
 <div class="layout-cabinet__container">
+    <div class="layout-cabinet__sidebar">
+        <div class="layout-cabinet__sidebar-menu">
+            <span class="layout-cabinet__sidebar-title">Информер</span>
+            <div class="layout-cabinet__sidebar-item" [ngClass]="{'active': true}">
+                <div class="layout-cabinet__sidebar-icon" [ngClass]="{'active': true}"></div>
+                <span class="layout-cabinet__sidebar-text" [ngClass]="{'active': true}">Кадровые изменения</span>
+            </div>
+            <div class="layout-cabinet__sidebar-item">
+                <div class="layout-cabinet__sidebar-icon"></div>
+                <span class="layout-cabinet__sidebar-text">Дни рождения</span>
+            </div>
+            <div class="layout-cabinet__sidebar-item">
+                <div class="layout-cabinet__sidebar-icon"></div>
+                <span class="layout-cabinet__sidebar-text">Сотрудники</span>
+            </div>
+            <div class="layout-cabinet__sidebar-item">
+                <div class="layout-cabinet__sidebar-icon"></div>
+                <span class="layout-cabinet__sidebar-text">Календарь</span>
+            </div>
+            <div class="layout-cabinet__sidebar-item">
+                <div class="layout-cabinet__sidebar-icon"></div>
+                <span class="layout-cabinet__sidebar-text">События</span>
+            </div>
+        </div>
+    </div>
     <router-outlet></router-outlet>
 </div>
