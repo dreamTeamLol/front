@@ -1,0 +1,54 @@
+.layout-cabinet {
+    &__container {
+        display: flex;
+    }
+
+    &__sidebar {
+        flex-basis: 20%;
+        height: 100vh;
+        font-family: Monaco, "Lucida Console", monospace;
+        background-color: #F1F2F7;
+    }
+
+    &__sidebar-menu {
+        width: 200px;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__sidebar-title {
+        color: #082431;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    &__sidebar-item {
+        height: 42px;
+        display: flex;
+        padding: 12px 18px;
+
+        &.active {
+            background-color: #707FDD;
+        }
+    }
+
+    &__sidebar-icon {
+        width: 18px;
+        height: 18px;
+        fill: #273240;
+
+        &.active {
+            fill: #707FDD;
+        }
+    }
+
+    &__sidebar-text {
+        color: #273240;
+        text-transform: capitalize;
+
+        &.active {
+            color: #707FDD;
+        }
+    }
+}
