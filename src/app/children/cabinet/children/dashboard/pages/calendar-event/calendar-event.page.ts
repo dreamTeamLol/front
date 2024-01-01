@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
-    templateUrl: './dashboard.page.html',
-    styleUrls: ['./styles/dashboard.page.scss'],
+    templateUrl: './calendar-event.page.html',
+    styleUrls: ['./styles/calendar-event.page.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DashboardPage {
+export class CalendarEventPage {
 
 }

@@ -1,7 +1,7 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule, Routes } from "@angular/router";
-import { LayoutCabinetPage } from "./pages/layout-cabinet/layout-cabinet.page.";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { LayoutCabinetPage } from './pages/layout-cabinet/layout-cabinet.page.';
 
 const cabinetRoutes: Routes = [
     {
@@ -21,13 +21,14 @@ const cabinetRoutes: Routes = [
     }
 ]
 
-
 @NgModule({
     imports: [
         CommonModule,
         RouterModule.forChild(cabinetRoutes)
     ],
-    declarations: [LayoutCabinetPage],
+    declarations: [
+        LayoutCabinetPage
+    ],
 })
 export class CabinetRoutingModule {
 

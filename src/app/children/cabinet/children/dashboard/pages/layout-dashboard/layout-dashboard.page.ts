@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-    templateUrl: './layout-cabinet.page.html',
-    styleUrls: ['./styles/layout-cabinet.page.scss'],
+    templateUrl: './layout-dashboard.page.html',
+    styleUrls: ['./styles/layout-dashboard.page.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LayoutCabinetPage {
+export class LayoutDashboardPage {
 
 }

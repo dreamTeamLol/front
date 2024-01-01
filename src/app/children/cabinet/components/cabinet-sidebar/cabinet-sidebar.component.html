@@ -1,0 +1,11 @@
+<div class="cabinet-sidebar__container">
+    <div class="cabinet-sidebar__menu">
+        <h3 class="cabinet-sidebar__title">Информер</h3>
+        <div class="cabinet-sidebar__item" *ngFor="let option of cabinetSidebarSettings">
+            <div class="cabinet-sidebar__icon">
+                <img src="assets/images/{{option.icon}}.svg"/>
+            </div>
+            <a class="cabinet-sidebar__text" routerLink="{{option.path}}" routerLinkActive="active">{{option.title}}</a>
+        </div>
+    </div>
+</div>
