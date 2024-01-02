@@ -3,7 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { LayoutAccountPage } from "./pages/layout-account/layout-account.page";
 import { LayoutLoginPage } from "./pages/layout-login/layout-login.page";
 import { LayoutRegisterPage } from "./pages/layout-register/layout-register.page";
-import { CommonModule } from "@angular/common";
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 
 const components: any[] = [
@@ -38,7 +38,8 @@ const accountRoutes: Routes = [
 @NgModule({
     imports: [
         RouterModule.forChild(accountRoutes),
-        CommonModule
+        CommonModule,
+        NgOptimizedImage
     ],
     declarations: [ components ],
     providers: []
