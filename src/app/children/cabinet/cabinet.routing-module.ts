@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutCabinetPage } from './pages/layout-cabinet/layout-cabinet.page.';
+import { HttpClientModule } from '@angular/common/http';
 
 const cabinetRoutes: Routes = [
     {
@@ -24,7 +25,8 @@ const cabinetRoutes: Routes = [
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild(cabinetRoutes)
+        RouterModule.forChild(cabinetRoutes),
+        HttpClientModule,
     ],
     declarations: [
         LayoutCabinetPage

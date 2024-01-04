@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
-import { IPersonnel } from '../../interfaces/personnel.interface';
+import { IUser } from '../../interfaces/user.interface';
 
 @Component({
     selector: 'cabinet-personnel-card',
@@ -9,6 +9,6 @@ import { IPersonnel } from '../../interfaces/personnel.interface';
 })
 export class PersonnelCardComponent {
     @Input()
-    public personnel!: IPersonnel
+    public personnel!: IUser;
 
 }

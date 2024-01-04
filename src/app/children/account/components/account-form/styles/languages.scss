@@ -1,0 +1,22 @@
+.languages {
+  position: relative;
+
+  &__select {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    right: 32px;
+    top: 16px;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__link {
+    color: #0054a0;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+  }
+}

@@ -1,5 +1,29 @@
 .personnel-card {
   &__container {
+      display: inline;
+  }
 
+  &__item {
+    border: 1px solid;
+    padding: 16px;
+    border-radius: 8px;
+    width: 545px;
+    height: 306px;
+    background: #C8CBD9;
+    opacity: 0.5;
+  }
+
+  &__wrapper-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    background: #FFE6CC;
+  }
+
+  &__img {
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 9px 8px 8px 9px;
   }
 }

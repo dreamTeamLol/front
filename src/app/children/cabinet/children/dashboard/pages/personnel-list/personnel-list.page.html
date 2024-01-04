@@ -1,5 +1,10 @@
 <div class="personnel-list">
     <div class="personnel-list__container">
         <h2 class="personnel-list__title">Кадровые изменения</h2>
+        <div class="personnel-list__wrapper" *ngIf="personnelList$ | async as personnelList">
+            <div class="personnel-list__card" *ngFor="let personnel of personnelList">
+                <cabinet-personnel-card [personnel]="personnel"></cabinet-personnel-card>
+            </div>
+        </div>
     </div>
 </div>

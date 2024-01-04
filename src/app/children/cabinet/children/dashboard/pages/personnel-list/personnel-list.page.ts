@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Inject } from "@angular/core";
 import { PersonnelApiService } from '../../services/personnel-api.service';
 import { Observable } from 'rxjs';
-import { IPersonnel } from '../../interfaces/personnel.interface';
+import { IUser } from '../../interfaces/user.interface';
 
 @Component({
     templateUrl: './personnel-list.page.html',
@@ -10,9 +10,9 @@ import { IPersonnel } from '../../interfaces/personnel.interface';
 })
 export class PersonnelListPage {
 
-    public personnelList: Observable<IPersonnel[]>;
+    public personnelList$: Observable<IUser[]>;
 
     constructor(@Inject(PersonnelApiService) private _personnelApiService: PersonnelApiService) {
-        this.personnelList = this._personnelApiService.getPersonnelList();
+        this.personnelList$ = this._personnelApiService.getPersonnelList();
     }
 }

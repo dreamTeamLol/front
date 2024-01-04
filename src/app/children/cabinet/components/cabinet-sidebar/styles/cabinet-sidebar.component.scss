@@ -1,9 +1,10 @@
 .cabinet-sidebar {
   &__container {
-    position: fixed;
+    position: relative;
+    float: left;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 246px;
     background: #F1F2F7;
   }

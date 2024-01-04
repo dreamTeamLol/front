@@ -1,26 +1,5 @@
 <div class="login">
     <div class="login__container">
-        <form class="login__form">
-            <div class="languages">
-                <div class="languages__select">
-                    <img class="languages__icon" ngSrc="assets/images/languages.svg" width="16" height="16">
-                    <div class="languages__link">Русский (Россия)</div>
-                </div>
-            </div>
-            <img class="login__logo" ngSrc="assets/images/login-logo.svg" width="208" height="45">
-            <div class="login__input-list">
-                <ng-container class="login__input-container">
-                    <input class="login__input" type="text" spellcheck="false" placeholder="Имя">
-                </ng-container>
-                <ng-container class="login__input-container">
-                    <input class="login__input" type="password" spellcheck="false" placeholder="Пароль">
-                </ng-container>
-            </div>
-            <div class="login__submit">
-                <button type="submit" class="login__button">
-                    <span class="login__button-text">Вход</span>
-                </button>
-            </div>
-        </form>
+        <account-login-form></account-login-form>
     </div>
 </div>

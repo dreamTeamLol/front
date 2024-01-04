@@ -10,6 +10,7 @@ import { CalendarAdsencePage } from "./pages/calendar-adsence/calendar-adsence.p
 import { CalendarEventPage } from "./pages/calendar-event/calendar-event.page";
 import { LayoutDashboardPage } from './pages/layout-dashboard/layout-dashboard.page';
 import { PersonnelApiService } from './services/personnel-api.service';
+import { URL } from './tokens/url.token';
 
 const components: any[] = [
     LayoutDashboardPage,
@@ -27,6 +28,11 @@ const dashboardRoutes: Routes = [
         path: '',
         component: LayoutDashboardPage,
         children: [
+            {
+                path: '',
+                redirectTo: 'personnel-list',
+                pathMatch: 'full'
+            },
             {
                 path: 'personnel-list',
                 component: PersonnelListPage,
@@ -58,6 +64,10 @@ const dashboardRoutes: Routes = [
     ],
     providers: [
         PersonnelApiService,
+        {
+            provide: URL,
+            useValue: 'https://directum.snedson.com/api/v1/'
+        }
     ]
 })
 export class DashboardRoutingModule {
