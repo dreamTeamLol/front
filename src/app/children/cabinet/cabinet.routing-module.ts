@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutCabinetPage } from './pages/layout-cabinet/layout-cabinet.page.';
+import { cabinetGuard } from './guards/cabinet.guard';
 
 const cabinetRoutes: Routes = [
     {
         path: '',
         component: LayoutCabinetPage,
+        canActivate: [cabinetGuard],
         children: [
             {
                 path: '',
