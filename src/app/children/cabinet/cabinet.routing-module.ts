@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutCabinetPage } from './pages/layout-cabinet/layout-cabinet.page.';
+import { cabinetGuard } from './guards/cabinet.guard';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchService } from './services/search.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const cabinetRoutes: Routes = [
     {
         path: '',
         component: LayoutCabinetPage,
+        canActivate: [cabinetGuard],
         children: [
             {
                 path: '',
@@ -31,6 +35,9 @@ const cabinetRoutes: Routes = [
     declarations: [
         LayoutCabinetPage
     ],
+    providers: [
+        SearchService,
+    ]
 })
 export class CabinetRoutingModule {
 

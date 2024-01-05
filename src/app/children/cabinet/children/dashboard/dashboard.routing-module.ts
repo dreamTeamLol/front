@@ -11,6 +11,8 @@ import { CalendarEventPage } from "./pages/calendar-event/calendar-event.page";
 import { LayoutDashboardPage } from './pages/layout-dashboard/layout-dashboard.page';
 import { PersonnelApiService } from './services/personnel-api.service';
 import { URL } from './tokens/url.token';
+import { SearchPipe } from './pipes/search.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const components: any[] = [
     LayoutDashboardPage,
@@ -55,12 +57,14 @@ const dashboardRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        components
+        components,
+        SearchPipe
     ],
     imports: [
         CommonModule,
         RouterModule.forChild(dashboardRoutes),
         RouterLinkActive,
+        ReactiveFormsModule,
     ],
     providers: [
         PersonnelApiService,

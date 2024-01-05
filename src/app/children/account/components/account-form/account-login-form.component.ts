@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AccountLoginFormBaseComponent } from './account-login-form..base.component';
 
 @Component({
     selector: 'account-login-form',
@@ -6,6 +7,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     styleUrls: ['./styles/account-login-form.component.scss', './styles/languages.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AccountLoginFormComponent {
+export class AccountLoginFormComponent extends AccountLoginFormBaseComponent {
 
 }

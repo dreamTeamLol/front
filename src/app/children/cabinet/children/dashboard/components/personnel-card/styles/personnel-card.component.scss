@@ -1,6 +1,24 @@
 .personnel-card {
   &__container {
-      display: inline;
+    display: inline;
+    padding: 20px;
+  }
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__header-item {
+    width: 545px;
+    display: block;
+    padding: 22px;
+    flex-direction: column;
+  }
+
+  &__fullName {
+    font-size: 18px;
+    color: #1F384C;
   }
 
   &__item {
@@ -9,8 +27,7 @@
     border-radius: 8px;
     width: 545px;
     height: 306px;
-    background: #C8CBD9;
-    opacity: 0.5;
+    background: #F1F2F7;
   }
 
   &__wrapper-img {
@@ -25,5 +42,27 @@
     margin-right: auto;
     margin-left: auto;
     padding: 9px 8px 8px 9px;
+  }
+
+  &__footer-wrapper {
+    padding-top: 56px;
+    position: relative;
+    margin-bottom: 22px;
+    display: block;
+    min-width: 477px;
+  }
+
+  &__footer-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__info {
+    font-size: 18px;
+    color: #1F384C;
   }
 }

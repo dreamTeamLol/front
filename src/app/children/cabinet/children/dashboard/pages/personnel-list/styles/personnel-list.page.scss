@@ -1,20 +1,19 @@
 .personnel-list {
   &__container {
-    justify-content: center;
-    align-items: center;
-    width: 100vh;
+    padding-top: 60px;
+  }
+
+  &__title {
+    font-size: 18px;
+    color: #1F384C;
+    padding-left: 32px;
   }
 
   &__wrapper {
+    padding: 32px;
     display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-  }
-
-  &__cards {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-gap: 32px;
+    grid-auto-flow: dense;
   }
 }

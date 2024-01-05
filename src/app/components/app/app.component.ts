@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AccountRoutingModule } from '../../children/account/account.routing-module';
 import { CabinetRoutingModule } from '../../children/cabinet/cabinet.routing-module';
 import { DestroyService } from "../../services/destroy.service";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
     standalone: true,
@@ -12,6 +13,8 @@ import { DestroyService } from "../../services/destroy.service";
         RouterOutlet,
         AccountRoutingModule,
         CabinetRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
     ],
     providers: [
         DestroyService

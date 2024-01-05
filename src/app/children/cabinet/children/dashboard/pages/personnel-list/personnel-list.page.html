@@ -1,10 +1,14 @@
 <div class="personnel-list">
     <div class="personnel-list__container">
-        <h2 class="personnel-list__title">Кадровые изменения</h2>
-        <div class="personnel-list__wrapper" *ngIf="personnelList$ | async as personnelList">
-            <div class="personnel-list__card" *ngFor="let personnel of personnelList">
+        <div class="personnel-list__title">Кадровые изменения</div>
+        <div class="personnel-list__wrapper" *ngIf="personnelList$ | async as personnelList; else loader">
+            <div class="personnel-list__card" *ngFor="let personnel of personnelList | filter: (value | async)">
                 <cabinet-personnel-card [personnel]="personnel"></cabinet-personnel-card>
             </div>
         </div>
     </div>
 </div>
+
+<ng-template #loader>
+    <h1 [ngStyle]="{'padding': '22px'}">Loading...</h1>
+</ng-template>

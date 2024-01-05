@@ -1,19 +1,17 @@
 .layout-dashboard {
-    
+
     &__sidebar {
-        display: flex;
         position: relative;
-        float: left;
     }
 
     &__header {
-        position: absolute;
+        position: relative;
     }
 
     &__line {
         border-bottom: 1px solid #C8CBD9;
-        width: 100%;
         position: absolute;
-        padding: 20px;
+        width: 100%;
+        padding-top: 60px;
     }
 }

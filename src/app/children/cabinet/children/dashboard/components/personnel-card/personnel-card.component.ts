@@ -4,7 +4,7 @@ import { IUser } from '../../interfaces/user.interface';
 @Component({
     selector: 'cabinet-personnel-card',
     templateUrl: './personnel-card.component.html',
-    styleUrls: ['./styles/personnel-card.component.scss'],
+    styleUrls: ['./styles/personnel-card.component.scss', './styles/personne-card-line.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PersonnelCardComponent {
