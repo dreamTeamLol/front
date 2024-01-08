@@ -70,7 +70,7 @@ const dashboardRoutes: Routes = [
         PersonnelApiService,
         {
             provide: URL,
-            useValue: 'https://directum.snedson.com/api/v1/'
+            useValue: 'https://directum.snedson.com/api/v1'
         }
     ]
 })

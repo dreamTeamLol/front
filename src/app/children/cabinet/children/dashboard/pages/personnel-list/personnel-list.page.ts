@@ -11,7 +11,7 @@ import { SearchService } from '../../../../services/search.service';
 })
 export class PersonnelListPage {
 
-    public personnelList$: Observable<IUser[]>;
+    public personnelList$: Observable<IUser[] | null>;
     public value: Observable<string | null>;
 
     constructor(
