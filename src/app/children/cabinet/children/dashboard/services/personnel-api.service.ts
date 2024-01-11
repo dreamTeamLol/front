@@ -25,7 +25,7 @@ export class PersonnelApiService {
         return this._http.get<IEmployee[]>(`${this._url}/Employee`)
             .pipe(
                 map((users: IEmployee[]) => users)
-            )
+            );
     }
 
     /**
@@ -47,6 +47,9 @@ export class PersonnelApiService {
      */
     public getMeetingList(): Observable<IMeeting[]> {
         return this._http.get<IMeeting[]>(`${this._url}/Meeting`)
+            .pipe(
+                map((meetingList: IMeeting[]) => meetingList)
+            );
     }
 
     /**
