@@ -1,9 +1,14 @@
-import { IUser } from './user.interface';
+import { IEmployee } from './employee.interface';
 
 export interface ISubstitue {
-    user: IUser;
-    substitue: IUser;
+    id?: number;
+    employee: IEmployee;
+    substitue: ISubstitue;
     startDate: string;
     endDate: string;
     comment: string;
+}
+
+export interface ISubstitue extends IEmployee {
+
 }

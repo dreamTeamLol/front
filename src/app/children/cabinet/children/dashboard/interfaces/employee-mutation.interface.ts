@@ -1,7 +1,9 @@
-import { IUser } from './user.interface';
-import { IMutation } from './mutation.interface';
+import { IEmployee } from './employee.interface';
 
 export interface IEmployeeMutation {
-    employee: IUser;
-    mutation: IMutation;
+    id?: string;
+    employee: IEmployee;
+    mutation: string;
+    appliedDate: string;
+    note: string;
 }

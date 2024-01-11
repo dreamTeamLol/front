@@ -2,9 +2,10 @@ import { Inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { URL } from '../tokens/url.token';
 import { HttpClient } from '@angular/common/http';
-import { IUser } from '../interfaces/user.interface';
+import { IEmployee } from '../interfaces/employee.interface';
 import { IEmployeeMutation } from '../interfaces/employee-mutation.interface';
 import { ISubstitue } from '../interfaces/substitue.interface';
+import { IMeeting } from '../interfaces/meeting.interface';
 
 @Injectable()
 export class PersonnelApiService {
@@ -18,12 +19,12 @@ export class PersonnelApiService {
     /**
      * Получение кадров
      *
-     * @returns Observable<IUser[]>
+     * @returns Observable<IEmployee[]>
      */
-    public getPersonnelList(): Observable<IUser[]> {
-        return this._http.get<IUser[]>(`${this._url}/Birthday`)
+    public getPersonnelList(): Observable<IEmployee[]> {
+        return this._http.get<IEmployee[]>(`${this._url}/Employee`)
             .pipe(
-                map((users: IUser[]) => users)
+                map((users: IEmployee[]) => users)
             )
     }
 
@@ -37,6 +38,15 @@ export class PersonnelApiService {
             .pipe(
                 map((employeeMutationList: IEmployeeMutation[]) => employeeMutationList)
             );
+    }
+
+    /**
+     * Получение синков
+     * 
+     * @returns Observable<IMeeting[]>
+     */
+    public getMeetingList(): Observable<IMeeting[]> {
+        return this._http.get<IMeeting[]>(`${this._url}/Meeting`)
     }
 
     /**
