@@ -1,5 +1,16 @@
 <div class="employee-birthdays">
-    <div class="employee-birthdays__container">
-        <div class="employee-birthdays__title">Дни рождения</div>
-    </div>
+    <div class="employee-birthdays__title">Дни рождения</div>
+    @if (personnelList$ | async; as personnelList) {
+        <div class="employee-birthdays__wrapper">
+            @for (personnel of personnelList | filterEmployees: (value | async); track personnel.id) {
+                <div class="employee-birthdays__card">
+                    <cabinet-personnel-card [personnel]="personnel"></cabinet-personnel-card>
+                </div>
+            } @empty {
+                <h3 class="employee-birthdays__empty">Ничего не найдено</h3>
+            }
+        </div>
+    } @else {
+        <h3 class="employee-birthdays__loader">Loading...</h3>
+    }
 </div>

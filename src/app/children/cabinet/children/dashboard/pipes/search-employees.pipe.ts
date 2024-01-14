@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { IEmployee } from '../interfaces/employee.interface';
 
 @Pipe({
-    name: 'filter'
+    name: 'filterEmployees'
 })
-export class SearchPipe implements PipeTransform {
+export class SearchEmployeesPipe implements PipeTransform {
 
     public transform(data: IEmployee[], value: string | null): IEmployee[] {
         if (!value) {

@@ -1,20 +1,16 @@
 <div class="personnel-list">
-    <div class="personnel-list__container">
-        <div class="personnel-list__title">Кадровые изменения</div>
-        <div class="personnel-list__wrapper" *ngIf="personnelList$ | async as personnelList; else loader">
-            <div class="personnel-list__card" *ngFor="let personnel of personnelList | filter: (value | async) as items">
-                <ng-container *ngIf="items.length; else empty">
-                    <cabinet-personnel-card [personnel]="personnel"></cabinet-personnel-card>
-                </ng-container>
-            </div>
+    <div class="personnel-list__title">Кадровые изменения</div>
+    @if (personnelList$ | async; as personnelList) {
+        <div class="personnel-list__wrapper">
+            @for (personnel of personnelList | filterMutations: (value | async); track personnel.id) {
+                <div class="personnel-list__card">
+                    <cabinet-personnel-card [personnel]="personnel.employee"></cabinet-personnel-card>
+                </div>
+            } @empty {
+                <h3 class="personnel-list__empty">Ничего не найдено</h3>
+            }
         </div>
-    </div>
+    } @else {
+        <h3 class="personnel-list__loader">Loading...</h3>
+    }
 </div>
-
-<ng-template #loader>
-    <h3 class="personnel-list__loader">Loading...</h3>
-</ng-template>
-
-<ng-template #empty>
-    <h3 class="personnel-list__empty">Ничего не найдено</h3>
-</ng-template>

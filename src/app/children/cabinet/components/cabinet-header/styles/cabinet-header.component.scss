@@ -1,48 +1,43 @@
 .cabinet-header {
-
-  &__container {
-    position: fixed;
     display: flex;
     width: 100%;
     padding-top: 16px;
     justify-content: space-between;
-    margin-right: 143px;
-  }
 
-  &__search {
-    margin-right: auto;
-    margin-left: auto;
-  }
+    &__search {
+        margin-left: 20px;
+        width: 50%;
+    }
 
-  &__input {
-    padding: 15px;
-    height: 32px;
-    width: 625px;
-    border: 1px solid;
-    border-radius: 5px;
-    background: #F6F6FB;
-    color: #1F384C;
-  }
+    &__input {
+        padding: 15px;
+        height: 32px;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 5px;
+        background: #F6F6FB;
+        color: #1F384C;
+    }
 
-  &__info {
-    display: flex;
-  }
+    &__info {
+        width: 100px;
+    }
 
-  &__item {
-    margin-right: 59px;
-  }
+    &__item {
+        margin-right: 59px;
+    }
 
-  &__wrapper-img {
-    margin-right: 12px;
-    border-radius: 32px;
-    width: 32px;
-    height: 32px;
-    background: #FFE6CC;
-    padding: 5px;
-  }
+    &__wrapper-img {
+        margin-right: 12px;
+        border-radius: 32px;
+        width: 32px;
+        height: 32px;
+        background: #FFE6CC;
+        padding: 5px;
+    }
 
-  &__img {
-    width: 22px;
-    height: 22px;
-  }
+    &__img {
+        width: 22px;
+        height: 22px;
+    }
 }
