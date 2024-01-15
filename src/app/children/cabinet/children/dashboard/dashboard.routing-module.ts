@@ -5,6 +5,7 @@ import { CabinetSidebarComponent } from "../../components/cabinet-sidebar/cabine
 import { PersonnelListPage } from "./pages/personnel-list/personnel-list.page";
 import { CabinetHeaderComponent } from "../../components/cabinet-header/cabinet-header.component";
 import { PersonnelCardComponent } from "./components/personnel-card/personnel-card.component";
+import { CabinetEventComponent } from "./components/cabinet-event/cabinet-event.component";
 import { EmployeeBirthdaysPage } from "./pages/employee-birthdays/employee-birthdays.page";
 import { CalendarAdsencePage } from "./pages/calendar-adsence/calendar-adsence.page";
 import { CalendarEventPage } from "./pages/calendar-event/calendar-event.page";
@@ -13,6 +14,7 @@ import { PersonnelApiService } from './services/personnel-api.service';
 import { URL } from './tokens/url.token';
 import { SearchMutationsPipe } from './pipes/search-mutations.pipe';
 import { SearchEmployeesPipe } from './pipes/search-employees.pipe';
+import { SearchEventsPipe } from './pipes/search-events.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 
 const components: any[] = [
@@ -21,6 +23,7 @@ const components: any[] = [
     PersonnelListPage,
     CabinetHeaderComponent,
     PersonnelCardComponent,
+    CabinetEventComponent,
     EmployeeBirthdaysPage,
     CalendarAdsencePage,
     CalendarEventPage,
@@ -45,10 +48,6 @@ const dashboardRoutes: Routes = [
                 component: EmployeeBirthdaysPage
             },
             {
-                path: 'calendar-absence',
-                component: CalendarAdsencePage
-            },
-            {
                 path: 'calendar-events',
                 component: CalendarEventPage
             }
@@ -60,7 +59,8 @@ const dashboardRoutes: Routes = [
     declarations: [
         components,
         SearchMutationsPipe,
-        SearchEmployeesPipe
+        SearchEmployeesPipe,
+        SearchEventsPipe
     ],
     imports: [
         CommonModule,

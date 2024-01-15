@@ -1,0 +1,25 @@
+<div class="personnel-card">
+    <div class="personnel-card__container">
+        <div class="personnel-card__item">
+            <div class="personnel-card__header-wrapper">
+                <div class="personnel-card__header-item">
+                    <div class="personnel-card__fullName">{{ event.name}}</div>
+                    <div class="personnel-card__footer-item">
+                        <p class="personnel-card__title">Дата</p>
+                        <span class="personnel-card__info">{{ event.dateTime.substring(0, 10) }}</span>
+                    </div>
+                    <div class="personnel-card__footer-item">
+                        <p class="personnel-card__title">Место</p>
+                        <span class="personnel-card__info">{{ event.location }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="personnel-card__footer-wrapper">
+                <p class="personnel-card__title">Участники</p>
+                @for (member of event.members; track member.id) {
+                    <span class="personnel-card__info">{{ member.fullName }}<br/></span>
+                }
+            </div>
+        </div>
+    </div>
+</div>

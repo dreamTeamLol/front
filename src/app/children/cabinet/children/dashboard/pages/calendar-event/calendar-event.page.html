@@ -1,5 +1,16 @@
 <div class="calendar-event">
-    <div class="calendar-event__container">
-        <div class="calendar-event__title">Календарь событий</div>
-    </div>
+    <div class="calendar-event__title">События</div>
+    @if (meetingList | async; as meetingList) {
+        <div class="calendar-event__wrapper">
+            @for (meeting of meetingList | filterEvents: (value | async); track meeting.id) {
+                <div class="calendar-event__card">
+                    <cabinet-event [event]="meeting"></cabinet-event>
+                </div>
+            } @empty {
+                <h3 class="calendar-event__empty">Ничего не найдено</h3>
+            }
+        </div>
+    } @else {
+        <h3 class="calendar-event__loader">Loading...</h3>
+    }
 </div>

@@ -12,12 +12,7 @@ export const cabinetSidebarSettings: ISidebarSettings[] = [
         icon: 'birthdays'
     },
     {
-        title: 'Календарь отсутствий',
-        path: 'calendar-absence',
-        icon: 'absence-calendar'
-    },
-    {
-        title: 'Календарь событий',
+        title: 'События',
         path: 'calendar-events',
         icon: 'calendar-events'
     }
